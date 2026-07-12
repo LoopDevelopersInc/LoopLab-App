@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Admin Dashboard"
+            app:titleTextColor="#000000"
+            android:layout_marginHorizontal="4dp"
+            app:background="@android:color/transparent" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Welcome Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="#BEF294"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:id="@+id/tvWelcomeMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome back, Admin!"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/manrope_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Manage and oversee the LoopLab platform"
+                        android:textColor="#4A6A2A"
+                        android:textSize="16sp"
+                        android:alpha="0.9"
+                        android:fontFamily="@font/manrope_medium"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Platform Statistics -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Platform Statistics"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:fontFamily="@font/manrope_bold"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Total Users Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTotalUsers"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_profile"
+                            app:tint="#80000000" />
+
+                        <TextView
+                            android:id="@+id/tvTotalUsers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:textColor="#000000"
+                            android:textSize="80sp"
+                            tools:text="357" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="Total Users"
+                            android:textColor="#80000000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Total Courses Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTotalCourses"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_courses"
+                            app:tint="#80000000" />
+
+                        <TextView
+                            android:id="@+id/tvTotalCourses"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:textColor="#000000"
+                            android:textSize="80sp"
+                            tools:text="58" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="Total Courses"
+                            android:textColor="#80000000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <!-- Total Events Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTotalEvents"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_events"
+                            app:tint="#80000000" />
+
+                        <TextView
+                            android:id="@+id/tvTotalEvents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:textColor="#000000"
+                            android:textSize="80sp"
+                            tools:text="12" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="Total Events"
+                            android:textColor="#80000000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Active Sessions Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardActiveSessions"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_video"
+                            app:tint="#80000000" />
+
+                        <TextView
+                            android:id="@+id/tvActiveSessions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:textColor="#000000"
+                            android:textSize="80sp"
+                            tools:text="03" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="Live Now"
+                            android:textColor="#80000000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Admin Actions Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin Actions"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:fontFamily="@font/manrope_bold"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnManageUsers"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="Users"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_profile"
+                        app:iconTint="#6E94C9"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="20dp"
+                        app:backgroundTint="#A0C3F9" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnManageCourses"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Courses"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_courses"
+                        app:iconTint="#6E94C9"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="20dp"
+                        app:backgroundTint="#A0C3F9" />
+
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnManageEvents"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="Events"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_events"
+                        app:iconTint="#6E94C9"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="20dp"
+                        app:backgroundTint="#A0C3F9" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnManageAnnouncements"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Alerts"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_notification"
+                        app:iconTint="#6E94C9"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="20dp"
+                        app:backgroundTint="#A0C3F9" />
+                </LinearLayout>
+
+                <!-- Row 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewAnalytics"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="Analytics"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_analytics"
+                        app:iconTint="#6E94C9"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="20dp"
+                        app:backgroundTint="#A0C3F9" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnManageFeedback"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Feedback"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_chat"
+                        app:iconTint="#6E94C9"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="20dp"
+                        app:backgroundTint="#A0C3F9" />
+                </LinearLayout>
+
+                <!-- Row 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLiveSessions"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="Sessions"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_video"
+                        app:iconTint="#6E94C9"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="20dp"
+                        app:backgroundTint="#A0C3F9" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAIChatbot"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="AI Assistant"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_ai"
+                        app:iconTint="#6E94C9"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="20dp"
+                        app:backgroundTint="#A0C3F9" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Recent Activity Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Activity"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:fontFamily="@font/manrope_bold"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvRecentActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No recent activity"
+                        android:textColor="#80000000"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:gravity="center_vertical"
+                        android:drawableStart="@drawable/ic_time"
+                        android:drawablePadding="12dp"
+                        app:drawableTint="#80000000" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
